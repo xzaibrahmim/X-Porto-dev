@@ -1,0 +1,512 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Inter:wght@500&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* ============================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: Archivo, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+body {
+  background: #09050f;
+  font-family: Archivo, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  color: #fff;
+  overflow: scroll;
+  padding-bottom: 120px;
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+header .header {
+  padding: 75px 0 56px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+header .header .header-role span {
+  opacity: 0.25;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header .header .header-name {
+  display: flex;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+header .header .header-navbar ul {
+  display: flex;
+  gap: 2rem;
+  opacity: 0.25;
+}
+
+header .header .header-navbar li a {
+  color: #ffff;
+  opacity: 0.75;
+  transition: all 100ms ease-in;
+}
+
+header .header .header-navbar li a:hover {
+  color: #ffff;
+  opacity: 1;
+  transition: all 300ms ease-out;
+  font-family: Archivo, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+/* ========== Main cards ========== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 20px;
+  row-gap: 20px;
+}
+
+.cards > * {
+  isolation: isolate;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-hello {
+  width: auto; /* Sesuaikan lebar dan tinggi sesuai keinginan */
+  height: auto;
+  overflow: hidden; /* Mencegah gambar keluar dari kartu */
+  position: absolute;
+  z-index: 1;
+  border-radius: 1076px;
+  border: 2px solid #2a2b3a;
+  background: var(
+    --Radial,
+    radial-gradient(
+      127.11% 127.11% at 50.03% -4.65%,
+      rgba(1, 2, 20, 0.9) 39.07%,
+      #542bc8 71.97%,
+      #f0eaff 100%
+    )
+  );
+  border-radius: 30px 50px;
+  padding: 51px 58px;
+  grid-column: 1/9;
+}
+
+.card-hello::before {
+  /* background: linear-gradient(
+      18.48deg,
+      rgba(255, 255, 255, 0.25) 2.76%,
+      rgba(255, 255, 255, 0) 17.23%
+    ),
+    linear-gradient(
+      200.6deg,
+      rgba(255, 255, 255, 0.25) 4.13%,
+      rgba(255, 255, 255, 0) 20.54%
+    ); */
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.card-hello img.animasi-rotasi {
+  display: block;
+  width: 1010px;
+  height: 1010px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: -5%;
+  top: -60%;
+}
+
+.card-hello .card-hello-top-me img {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+}
+
+img.animasi-rotasi {
+  animation: rotasi 100s linear infinite;
+}
+
+@keyframes rotasi {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.card-hello {
+  position: relative;
+  /* width: 450px;
+      height: 120px; */
+}
+
+/*--------------- Style card hello top me ---------------*/
+
+.card-hello-top {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 1rem 0;
+}
+
+.card-hello-top-me {
+  display: flex;
+  align-items: center;
+}
+
+.card-hello-top-me img {
+  margin-right: 1.25rem;
+}
+
+.card-hello-top-me .title {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+.card-hello-top-me .role {
+  font-size: 24px;
+  opacity: 0.32;
+}
+
+.card-hello-top .medsos {
+  display: flex;
+  align-items: center;
+}
+
+.card-hello-top .medsos i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.card-hello-top .medsos-item::before {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+
+.card-hello-top .medsos-item:hover {
+  background-color: #ffffff16;
+  transform: scale(0.95);
+}
+
+.card-hello-top .medsos-item {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 6px;
+  color: #fff;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: relative;
+  transition: 0.45s cubic-bezier(0.6, 0.6, 0, 1) background-color,
+    0.45s cubic-bezier(0.6, 0.6, 0, 1) transform;
+  width: 40px;
+}
+
+.card-hello-top .medsos-item:not(:last-child) {
+  margin-right: 12px;
+}
+
+.card-title {
+  font-size: 56px;
+  margin-bottom: 26px;
+}
+
+.card-about {
+  font-size: 1.6rem;
+  line-height: 34px;
+  opacity: 0.6;
+}
+
+/*--------------- Style card hello right emoji ---------------*/
+.card-hello-right {
+  background: radial-gradient(
+    209.85% 209.85% at 50.03% -84.53%,
+    rgba(1, 2, 20, 0.9) 39.07%,
+    #542bc8 71.97%,
+    #f0eaff 100%
+  );
+  grid-column: 9/13;
+  border: 2px solid #2a2b3a;
+  border-radius: 50px 30px;
+}
+
+.card-hello-emoji img.hello {
+  height: 2.4rem;
+}
+
+img.emoji-img {
+  height: auto;
+}
+
+.animasi-emoji {
+  transition: transform 450ms ease 0s;
+  transform: translateY(60px);
+  width: auto;
+  height: auto;
+}
+
+.card-hello-rigth-emoji {
+  width: auto; /* Sesuaikan lebar dan tinggi sesuai keinginan */
+  height: auto;
+  overflow: hidden; /* Mencegah gambar keluar dari kartu */
+  z-index: 1;
+  display: inline;
+  position: relative;
+}
+
+.card-hello-emoji {
+  height: auto;
+}
+
+.card-hello-emoji span {
+  padding: 5px 0 0 0;
+  font-size: 40px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  top: 1.5rem;
+  opacity: 0.6;
+}
+
+.card-hello-emoji img {
+  position: relative;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -o-object-position: bottom center;
+  object-position: bottom center;
+}
+
+/*--------------- Style star ---------------*/
+
+.circle {
+  animation: cardHelloRightCircleScale 6s ease infinite;
+  background: #fff;
+  border-radius: 50%;
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes cardHelloRightCircleScale {
+  0%,
+  30%,
+  100% {
+    transform: translate(-50%, 50%) scale(1);
+  }
+  15% {
+    transform: translate(-50%, 50%) scale(0.95);
+  }
+}
+
+.card-hello-circle .circle:nth-child(1) {
+  animation-delay: 0.2s;
+  height: 380px;
+  width: 380px;
+  z-index: 4;
+}
+
+.card-hello-circle .circle:nth-child(2) {
+  opacity: 0.3;
+  animation-delay: 0.4s;
+  height: 480px;
+  width: 480px;
+  z-index: 3;
+}
+
+.card-hello-circle .circle:nth-child(3) {
+  opacity: 0.225;
+  animation-delay: 0.6s;
+  height: 580px;
+  width: 560px;
+  z-index: 2;
+}
+
+.card-hello-circle .circle:nth-child(4) {
+  opacity: 0.15;
+  animation-delay: 0.8s;
+  height: 680px;
+  width: 680px;
+  z-index: 1;
+}
+
+.card-hello-circle .circle:nth-child(5) {
+  opacity: 0.075;
+  animation-delay: 1s;
+  height: 780px;
+  width: 780px;
+  z-index: 0;
+}
+
+/* -------------------- card-porstofolio -------------------- */
+.card-portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: span 12;
+    gap: 20px;
+}
+
+.card-work-heading {
+  position: relative;
+}
+
+img.img-portofolio::before {
+  background: linear-gradient(
+      112.59deg,
+      rgba(255, 255, 255, 0.05) 83.32%,
+      rgba(255, 255, 255, 0.1) 94.31%
+    ),
+    linear-gradient(
+      109.73deg,
+      rgba(255, 255, 255, 0.1) 7.85%,
+      rgba(255, 255, 255, 0.05) 19.46%
+    );
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+}
+
+img.img-portofolio {
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+  border-radius: 50px 30px 30px;
+}
+
+img.img-portofolio:nth-child(2) {
+  border-radius: 30px 30px 30px;
+}
+
+.card-heading-title {
+  bottom: 55px;
+  left: 10;
+  position: absolute;
+  z-index: 2;
+  color: #03101a;
+  padding-left: 2.5rem;
+}
+
+.title-text {
+  font-size: 32px;
+}
+
+.title-portfolio {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 6px;
+}
+
+.card-progress span {
+  backdrop-filter: blur(10px);
+  background-color: #1a1a1a1a;
+  border-radius: 20px;
+  font-size: 13px;
+  padding: 5px 10px 4px;
+  text-transform: uppercase;
+}
+
+
+
+/* ============= MEDIA-QUERY ============== */
+@media (max-width: 1180px) {
+  .card-hello {
+    grid-column: 1/13;
+  }
+  .card-hello-right {
+    grid-column: 1/13;
+  }
+  .card-hello-top {
+    flex-direction: column;
+    row-gap: 1.2rem;
+  }
+  .header {
+    flex-direction: column;
+  }
+  .header .header-navbar {
+    display: none;
+  }
+  .card-hello .card-hello-top-me img.pp {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+  .card-hello-top .medsos i {
+    font-size: 34px;
+  }
+  .card-hello-top .medsos-item {
+    width: 50px;
+    height: 50px;
+  }
+  .card-portfolio {
+    margin: 20px 0;
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 414px){
+  .card-hello-top-me .role {
+    font-size: 16px;
+  }
+  .card-hello .card-hello-top-me img.pp {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
