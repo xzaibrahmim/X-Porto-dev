@@ -439,12 +439,8 @@ img.img-portofolio:nth-child(2) {
   left: 10;
   position: absolute;
   z-index: 2;
-  color: #03101a;
+  color: #030303;
   padding-left: 2.5rem;
-}
-
-.title-text {
-  font-size: 32px;
 }
 
 .title-portfolio {
@@ -456,9 +452,10 @@ img.img-portofolio:nth-child(2) {
 
 .card-progress span {
   backdrop-filter: blur(10px);
-  background-color: #1a1a1a1a;
+  background-color: #0000001a;
   border-radius: 20px;
   font-size: 13px;
+  font-weight: 500;
   padding: 5px 10px 4px;
   text-transform: uppercase;
 }
@@ -495,18 +492,36 @@ img.img-portofolio:nth-child(2) {
     height: 50px;
   }
   .card-portfolio {
-    margin: 20px 0;
     grid-template-columns: 1fr;
   }
 
 }
 
 @media (max-width: 414px){
+  .cards{
+
+  }
   .card-hello-top-me .role {
     font-size: 16px;
   }
   .card-hello .card-hello-top-me img.pp {
     width: 3.5rem;
     height: 3.5rem;
+  }
+  .card-title{
+    font-size: 3rem;
+  }
+  .card-about{
+    font-size: 1.5rem;
+  }
+  .card-hello{
+    padding: 51px 48px;
+  }
+  header .header .header-name {
+    font-size: 18px;
+  }
+  .card-hello img.animasi-rotasi {
+    left: -30%;
+    top: -45%;
   }
 }
